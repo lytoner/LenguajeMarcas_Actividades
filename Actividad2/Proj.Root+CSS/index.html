@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice Principal de la Práctica</title>
+
+    <!-- Carga el CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos base del código que te gustó */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #eef2ff 0%, #fef5ff 100%); /* Fondo degradado suave */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        /* Contenedor principal para centrar el contenido */
+        #page-container {
+            max-width: 1000px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+        }
+
+        /* Estilo para las tarjetas de enlace (reutilizando la clase) */
+        .link-card {
+            @apply flex flex-col items-center justify-center p-6 bg-white border border-indigo-200 rounded-xl shadow-lg hover:shadow-xl hover:ring-2 hover:ring-indigo-500 transition duration-300 transform hover:scale-[1.02] space-y-3 h-full;
+        }
+    </style>
+</head>
+<body>
+    <div id="page-container" class="space-y-12">
+
+        <!-- HEADER - BANNER PERSONALIZADO Y TÍTULO -->
+        <header class="text-center p-6 border-b-4 border-indigo-500 bg-indigo-50 rounded-xl shadow-lg">
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-indigo-800 mb-4">
+                BIENVENIDO A CONCEPTOS HTML
+            </h1>
+            <p class="mt-2 text-lg text-gray-600 mb-6">
+                Índice y Guía de Estudio de la Práctica Final
+            </p>
+            <!-- Tu imagen de banner personalizada aquí -->
+            <div class="flex justify-center">
+                <img src="img_optimizadas/CabeceraHTMLOptimiz.gif" 
+                     alt="Gráfico animado con el logotipo de HTML" 
+                     class="rounded-xl shadow-xl border-4 border-indigo-200 max-w-full h-auto">
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT CONTAINER -->
+        <main class="space-y-12 px-2 sm:px-6">
+
+            <!-- SECCIÓN 1: ARCHIVOS DE LA PRÁCTICA (NAVEGACIÓN) -->
+            <section id="indice-archivos">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-indigo-500 pl-3">
+                    Archivos de la Práctica
+                </h2>
+                <!-- Diseño de Grid responsivo para los enlaces (usando los SVGs limpios del último código) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Enlace 1: Conceptos -->
+                    <a href="Conceptos.html" class="link-card">
+                        <!-- Icono SVG: Bombilla -->
+                        <span class="text-indigo-600 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                        </span>
+                        <h3 class="text-xl font-semibold text-indigo-700">Conceptos Fundamentales</h3>
+                        <p class="text-sm text-center text-gray-500">
+                            Etiquetas de texto, listas, enlaces y estructura HTML.
+                        </p>
+                    </a>
+
+                    <!-- Enlace 2: Optimización -->
+                    <a href="Optimizacion.html" class="link-card">
+                        <!-- Icono SVG: Reloj/Velocidad -->
+                        <span class="text-indigo-600 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </span>
+                        <h3 class="text-xl font-semibold text-indigo-700">Optimización de Imágenes</h3>
+                        <p class="text-sm text-center text-gray-500">
+                            Tabla comparativa de pesos y formatos para un mejor rendimiento.
+                        </p>
+                    </a>
+
+                    <!-- Enlace 3: Formulario -->
+                    <a href="Formulario.html" class="link-card">
+                        <!-- Icono SVG: Sobre/Email -->
+                        <span class="text-indigo-600 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </span>
+                        <h3 class="text-xl font-semibold text-indigo-700">Formulario de Contacto</h3>
+                        <p class="text-sm text-center text-gray-500">
+                            Formulario con validaciones básicas e integración con Formspree.
+                        </p>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- SECCIÓN 2: INTRODUCCIÓN ¿QUÉ ES HTML? -->
+            <section class="pt-6 border-t-2 border-gray-100">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-indigo-500 pl-3">
+                    Introducción ¿Qué es HTML?
+                </h2>
+                <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 text-gray-700">
+                    <p class="text-lg leading-relaxed mb-4">
+                        HTML es el lenguaje de marcas que define la <strong class="text-indigo-700">estructura</strong> de las páginas web, 
+                        permitiendo incluir <em class="text-indigo-600">texto, imágenes, enlaces y formularios</em>.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        En esta práctica aprendemos los <strong class="text-indigo-700">conceptos básicos</strong> de HTML y cómo aplicarlos en la <em class="text-indigo-600">estructura semántica</em> de un sitio web.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 3: OBJETIVOS DE LA WEB -->
+            <section>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-indigo-500 pl-3">
+                    Objetivos de la Web
+                </h2>
+                <ul class="grid gap-3 list-none text-gray-700">
+                    <li class="flex items-center bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                        <span class="text-green-500 mr-3 text-xl">✓</span>
+                        Proporcionar una comprensión básica de <strong>HTML</strong>.
+                    </li>
+                    <li class="flex items-center bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                        <span class="text-green-500 mr-3 text-xl">✓</span>
+                        Ofrecer ejemplos prácticos para aprender a usar <strong>HTML</strong>.
+                    </li>
+                    <li class="flex items-center bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                        <span class="text-green-500 mr-3 text-xl">✓</span>
+                        Compartir recursos útiles para profundizar en el aprendizaje de HTML.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SECCIÓN 4: EJEMPLOS VISUALES -->
+            <section>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-indigo-500 pl-3">
+                    Ejemplos visuales
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <figure class="bg-white p-3 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
+                        <img src="img_original/diseñoweb1.jpg" alt="Diseño web" class="rounded-xl w-full h-48 object-cover mb-3">
+                        <figcaption class="text-center font-medium text-gray-500">Ejemplo de diseño web</figcaption>
+                    </figure>
+                    
+                    <figure class="bg-white p-3 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
+                        <img src="img_original/codigohtml.jpg" alt="Código HTML" class="rounded-xl w-full h-48 object-cover mb-3">
+                        <figcaption class="text-center font-medium text-gray-500">Ejemplo de código HTML</figcaption>
+                    </figure>
+                    
+                    <figure class="bg-white p-3 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
+                        <img src="img_optimizadas/persona html optimiz.jpg" alt="Aprender HTML" class="rounded-xl w-full h-48 object-cover mb-3">
+                        <figcaption class="text-center font-medium text-gray-500">Aprender HTML</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+
+            <!-- SECCIÓN 5: GUÍA RÁPIDA CSS (Usando la estructura detallada que enviaste) -->
+            <section id="recomendaciones-css" class="pt-6 border-t-2 border-gray-100">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-indigo-500 pl-3">
+                    Guía Rápida: Empieza a Entender CSS
+                </h2>
+                
+                <div class="space-y-8 text-gray-700">
+                    <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-600 italic">
+                        <p>¡Estás usando Tailwind y es un excelente punto de partida! Para pasar de "copiar y pegar" a "entender y modificar", enfócate en estos tres conceptos clave.</p>
+                    </div>
+
+                    <!-- Punto 1: Modelo de Caja -->
+                    <article class="flex flex-col md:flex-row gap-6 items-start bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-full">
+                            <span class="text-3xl">📦</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-indigo-700 mb-2">1. Fundamentos: El Modelo de Caja (Box Model)</h3>
+                            
+                            <p class="mb-4">
+                                Este es el concepto más importante. Todo elemento en HTML es una caja rectangular, y esas cajas tienen cuatro capas esenciales:
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-sm ml-2 bg-gray-50 p-4 rounded-lg">
+                                <li><strong>Contenido:</strong> El texto o imagen real.</li>
+                                <li><strong>Relleno (Padding):</strong> El espacio interno, entre el contenido y el borde. (Clases Tailwind: <code>p-4</code>, <code>px-2</code>)</li>
+                                <li><strong>Borde (Border):</strong> La línea que rodea el relleno. (Clases Tailwind: <code>border</code>)</li>
+                                <li><strong>Margen (Margin):</strong> El espacio externo, que separa la caja de otras cajas. (Clases Tailwind: <code>m-4</code>, <code>mx-auto</code>)</li>
+                            </ul>
+                            <p class="mt-3 text-sm italic text-gray-500">
+                                Entender esto te permite saber por qué un elemento se mueve o se separa de otro.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Punto 2: Flexbox y Grid -->
+                    <article class="flex flex-col md:flex-row gap-6 items-start bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-full">
+                            <span class="text-3xl">📐</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-indigo-700 mb-2">2. Manejo de Posiciones: Flexbox y Grid</h3>
+                            <p class="mb-4">
+                                Son las herramientas modernas para posicionar elementos y crear <em>layouts</em> responsivos.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                                    <h4 class="font-bold text-blue-800 mb-1">Flexbox</h4>
+                                    <p class="text-sm text-blue-700 mb-2">Ideal para alinear contenido en <strong>una sola dimensión</strong> (fila o columna).</p>
+                                    <code class="text-xs bg-white px-2 py-1 rounded border">flex</code>
+                                    <code class="text-xs bg-white px-2 py-1 rounded border">justify-center</code>
+                                    <code class="text-xs bg-white px-2 py-1 rounded border">items-center</code>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                                    <h4 class="font-bold text-green-800 mb-1">CSS Grid</h4>
+                                    <p class="text-sm text-green-700 mb-2">Perfecto para diseños complejos en <strong>dos dimensiones</strong> (filas y columnas).</p>
+                                    <code class="text-xs bg-white px-2 py-1 rounded border">grid</code>
+                                    <code class="text-xs bg-white px-2 py-1 rounded border">grid-cols-3</code>
+                                    <code class="text-xs bg-white px-2 py-1 rounded border">gap-4</code>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Punto 3: Selectores y Cascada -->
+                    <article class="flex flex-col md:flex-row gap-6 items-start bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                        <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-full">
+                            <span class="text-3xl">🔗</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-indigo-700 mb-2">3. Selectores Básicos y la Cascada</h3>
+                            <p class="mb-4">
+                                Si tienes que escribir CSS tradicional (fuera de Tailwind), necesitas entender:
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 ml-2 text-sm">
+                                <li>
+                                    <strong>Selectores:</strong> Cómo "apuntas" a un elemento (<code>#id</code> para únicos, <code>.clase</code> para grupos, <code>p</code> para etiquetas).
+                                </li>
+                                <li>
+                                    <strong>Cascada y Especificidad:</strong> El orden en que el navegador aplica los estilos. Si defines un color para un elemento de dos maneras diferentes, la regla más específica gana.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <!-- Recursos (con enlaces clicables) -->
+                    <div class="mt-8 bg-gray-800 text-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-bold mb-4 flex items-center">
+                            <span class="mr-2">📚</span> Recursos Sugeridos para Seguir Aprendiendo
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">✓</span>
+                                <div>
+                                    <!-- ENLACES AÑADIDOS AQUÍ -->
+                                    <strong class="text-green-300">
+                                        <a href="https://www.theodinproject.com/" target="_blank" class="text-green-300 hover:text-green-400 underline transition duration-150">The Odin Project</a> / 
+                                        <a href="https://www.freecodecamp.org/" target="_blank" class="text-green-300 hover:text-green-400 underline transition duration-150">FreeCodeCamp</a>:
+                                    </strong>
+                                    <span class="text-gray-300 text-sm block">Cursos interactivos y gratuitos sobre fundamentos de HTML y CSS.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">✓</span>
+                                <div>
+                                    <!-- ENLACES AÑADIDOS AQUÍ -->
+                                    <strong class="text-green-300">
+                                        <a href="https://www.w3schools.com/" target="_blank" class="text-green-300 hover:text-green-400 underline transition duration-150">W3Schools</a> / 
+                                        <a href="https://developer.mozilla.org/es/" target="_blank" class="text-green-300 hover:text-green-400 underline transition duration-150">MDN Web Docs</a>:
+                                    </strong>
+                                    <span class="text-gray-300 text-sm block">La mejor referencia rápida para buscar qué hace cualquier propiedad CSS.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        
+        </main>
+
+        <!-- FOOTER - Pie de página -->
+        <footer class="mt-auto p-4 sm:p-6 text-center bg-gray-800 text-white rounded-b-2xl">
+            <p class="text-sm">© 2025 - Lenguaje de Marcas y Sistemas de Información</p>
+        </footer>
+    </div>
+</body>
+</html>

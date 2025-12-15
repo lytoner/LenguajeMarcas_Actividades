@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+
+    <link rel="icon" type="image/png" href="img_original/faviconhtml.png">
+    
+</head>
+<body>
+    <a href="index.html"><img src="img_original/Casa.png" alt="Volver a Index" title="Volver a Index" width="40"></a>
+     <div style="width: auto%; margin: 20px auto; padding: 20px; border: 1px solid #ccc;">
+        
+        <header>
+            <h1 style="text-align: center;">Formulario de Contacto </h1>
+            <p style="text-align: center;">Envía tus comentarios sobre la práctica de Lenguaje de Marcas.</p>
+        </header>
+
+        <!-- 
+            INTEGRACIÓN CON FORMSPREE:
+            1. ACTION: Esta URL (ENDPOINT) es proporcionada por Formspree. Es donde se enviarán los datos. 
+            2. METHOD="POST": Es obligatorio para que el servidor de Formspree reciba la información del formulario.
+        -->
+        <form action="https://formspree.io/f/xeoyzapd" method="POST" >
+
+            <!-- CAMPO 1: Email de contacto -->
+            <!-- 
+               Usamos name="_replyto": Este nombre de campo especial de Formspree asegura que
+                al recibir el email, si haces clic en 'Responder', contestes directamente 
+                al email que el usuario introdujo aquí.-->
+            <div style="margin-bottom: 15px;">
+                <label for="email">
+                    1. Email de Contacto *
+                </label><br>
+                <input type="email" id="email" name="_replyto" placeholder="tucorreo@ejemplo.com"required style="width: 100%; padding: 8px; border: 1px solid #ddd; box-sizing: border-box;">
+
+            </div>
+
+            <!-- CAMPO 2: Lista desplegable (5 Conceptos) -->
+            <!-- 
+                SELECT y OPTION: Creamos una lista desplegable. 
+                Cada <option> tiene un 'value' que se envía y un texto visible que el usuario lee.-->
+            <div style="margin-bottom: 15px;">
+                <label for="concepto">
+                    2. ¿Cuál de los conceptos de la práctica te resultó más interesante?
+                </label><br>
+                <select 
+                    id="concepto" 
+                    name="Concepto Seleccionado" 
+                    required
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; box-sizing: border-box;"
+                >
+                    <option value="" disabled selected>-- Selecciona un concepto --</option>
+                    <!-- Conceptos de ejemplo, basados en el enunciado -->
+                    <option value="ACID">Etiquetas de Texto</option>
+                    <option value="Normalizacion3FN">Listas</option>
+                    <option value="Concepto 3">Inserción de Imágenes</option>
+                    <option value="Concepto 4">Tablas</option>
+                    <option value="Concepto 5">Enlaces</option>
+                    <option value="Concepto 6">Formulario</option>
+                </select>
+            </div>
+
+            <!-- CAMPO 3: Radio Buttons para valoración de la práctica -->
+            <!-- 
+                RADIO BUTTONS: Todos los inputs de tipo "radio" deben compartir el mismo 
+                atributo 'name' (en este caso, "Valoracion") para que solo se pueda 
+                seleccionar una opción a la vez.
+            -->
+            <div style="margin-bottom: 20px;">
+                <p>3. Valora la práctica en general:</p>
+                <div style="margin-top: 5px;">
+                    <!-- Opción 1: Difícil -->
+                    <input id="v_dificil" name="Valoracion" type="radio" value="Difícil" required>
+                    <label for="v_dificil">Difícil</label><br>
+                    <!-- Opción 2: Difícil no, pero un poco larga sí -->
+                    <input id="v_larga" name="Valoracion" type="radio" value="Larga">
+                    <label for="v_larga">Difícil no, pero un poco larga sí</label><br>
+                    <!-- Opción 3: Normal -->
+                    <input id="v_normal" name="Valoracion" type="radio" value="Normal">
+                    <label for="v_normal">Normal</label><br>
+                    <!-- Opción 4: Fácil -->
+                    <input id="v_facil" name="Valoracion" type="radio" value="Fácil">
+                    <label for="v_facil">Fácil</label><br>
+                    <!-- Opción 5: Pan comido -->
+                    <input id="v_pancomido" name="Valoracion" type="radio" value="Pan Comido">
+                    <label for="v_pancomido">Pan comido</label>
+                </div>
+            </div>
+
+            <!-- Creamos un CAMPO ADICIONAL: Mensaje adicional o sugerencias -->
+            <div style="margin-bottom: 20px;">
+                <label for="mensaje">
+                    Comentarios Adicionales (Opcional)
+                </label><br>
+                <textarea 
+                    id="mensaje" 
+                    name="Mensaje" 
+                    rows="4" 
+                    placeholder="Aquí puedes dejar cualquier sugerencia..."
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; box-sizing: border-box;"
+                ></textarea>
+            </div>
+
+            <!-- BOTONES DE ACCIÓN (Enviar y Reset) -->
+            <div style="text-align: center;">
+                <button type="submit" style="padding: 10px 20px; margin-right: 10px;">
+                    Enviar Comentarios
+                </button>
+                <button type="reset" style="padding: 10px 20px;">
+                    Reiniciar Formulario
+                </button>
+            </div>
+            
+            <!-- CAMPO OCULTO para enviar una copia al profesor -->
+            <!-- 
+                CAMPO OCULTO (_cc): Este campo de Formspree envía una Copia de Carbón (CC) 
+                del correo al email especificado en el 'value', asegurando que el profesor 
+                reciba una copia del mensaje enviado.
+            -->
+            <input type="hidden" name="_cc" value="Alejandro.delatorre@xaloc.org">
+
+        </form>
+    </div>
+
+  <footer>
+    <p>© 2025 - Lenguaje de Marcas y Sistemas de Información</p>
+  </footer>
+</body>
+</html>

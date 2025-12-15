@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 3: OPTIMIZACION DE IMAGENES</title>
+
+    <link rel="icon" type="image/png" href="img_original/faviconhtml.png">
+</head>
+<body>
+<a href="index.html"><img src="img_original/Casa.png" alt="Volver a Index" title="Volver a Index" width="40"></a>
+    <h1>Optimización de Imágenes</h1>
+    <p>Tabla con la información de las imágenes optimizadas.</p>
+
+    <!-- Creamos la tabla con thead, th, tbody, tfoot. -->
+    <table border="1" cellpadding="5" cellspacing="0" width="100%">
+        <!-- CABECERA DE LA TABLA (THEAD) -->
+        <thead>
+            <tr>
+                <!-- Columna: Descripción / Nombre de imagen -->
+                <th>Descripción</th> 
+                <!-- Columna: Nombre del archivo original -->
+                <th>Nombre del archivo original</th>
+                <!-- Columna: Descripción alt / Texto alternativo asignado -->
+                <th>Texto alternativo asignado</th>
+                <!-- Columna: Tamaño sin optimizar / Peso original del archivo -->
+                <th>Peso original (sin optimizar)</th> 
+                <!-- Columna: Tamaño optimizado / Peso final tras optimización -->
+                <th>Peso final (optimizado)</th>
+                <!-- Columna: Plataforma utilizada -->
+                <th>Plataforma utilizada</th>
+                <!-- Columna adicional para el cálculo (Opcional pero útil) -->
+                <th>Ahorro (%)</th>
+            </tr>
+        </thead>
+
+        <!-- CUERPO DE LA TABLA (TBODY) -->
+        <tbody>
+            
+            <tr>
+                <td>Logo Original</td>
+                <td>logo_original.png</td>
+                <td>Un logo aleatorio.</td>
+                <td>186 KB</td>
+                <td>64 KB</td>
+                <td>compressor.io</td>
+                <td>65%</td>
+            </tr>
+
+            <tr>
+                <td>Superhéroe</td>
+                <td>hero_banner.jpg</td>
+                <td>Dibujo de un Superhéroe.</td>
+                <td>75 KB</td>
+                <td>20 KB </td>
+                <td>Squoosh</td>
+                <td>73%</td>
+            </tr>
+
+            <tr>
+                <td>Chocolate</td>
+                <td>chocolate.png</td>
+                <td>Imagen de chocolate.</td>
+                <td>122 KB</td>
+                <td>30 KB</td>
+                <td>compressor.io</td>
+                <td>75%</td>
+            </tr>
+
+        
+        </tbody>
+
+        <!-- PIE DE LA TABLA (TFOOT) - Podriamos poner  resúmenes o totales -->
+        <tfoot>
+            <tr>
+                <td colspan="3">TOTALES</td>
+                <td>303 KB</td>
+                <td>104 KB</td>
+                <td colspan="2">Ahorro Total Estimado: ~71%</td>
+            </tr>
+        </tfoot>
+    </table>
+
+  <footer>
+    <p>© 2025 - Lenguaje de Marcas y Sistemas de Información</p>
+  </footer>
+</body>
+</html>

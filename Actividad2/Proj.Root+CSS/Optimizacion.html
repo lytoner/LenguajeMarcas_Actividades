@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 3: OPTIMIZACION DE IMAGENES</title>
+
+    <!-- Carga el CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos base */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Fondo muy claro */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Contenedor principal para centrar el contenido */
+        #page-container {
+            max-width: 1100px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 1.5rem;
+        }
+
+        /* Estilos de la tabla */
+        .tabla-optimizacion {
+            border: 2px solid #6366f1; /* Borde principal índigo */
+            border-radius: 0.75rem;
+            overflow: hidden; /* Asegura que los bordes redondeados se apliquen */
+        }
+        
+        .tabla-optimizacion thead th {
+            background-color: #4f46e5; /* Fondo índigo oscuro */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .tabla-optimizacion tbody tr:nth-child(even) {
+            background-color: #f3f4f6; /* Rayas ligeras */
+        }
+
+        .tabla-optimizacion tbody tr:hover {
+            background-color: #e0e7ff; /* Resaltar al pasar el ratón */
+            transition: background-color 0.2s;
+        }
+
+        .tabla-optimizacion tfoot td {
+            background-color: #1e40af; /* Azul oscuro para el pie */
+            color: white;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div id="page-container" class="space-y-10">
+
+        <!-- HEADER - Encabezado principal y botón de inicio -->
+        <header class="flex items-center justify-between p-4 border-b-4 border-indigo-500 bg-indigo-50 rounded-lg shadow-md">
+            <!-- Botón de Inicio (Icono SVG) -->
+            <a href="index.html" title="Volver al inicio" class="text-indigo-600 hover:text-indigo-800 transition duration-150 p-2 rounded-full hover:bg-indigo-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </a>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800">
+                OPTIMIZACIÓN DE IMÁGENES
+            </h1>
+            <div class="w-8 h-8"></div> <!-- Espaciador para centrar el título -->
+        </header>
+
+        <!-- MAIN - Contenido principal -->
+        <main class="space-y-8 px-2 sm:px-6">
+
+            <section id="introduccion">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-indigo-500 pl-3">Importancia de la Optimización</h2>
+                <p class="mb-6 text-gray-600">
+                    Optimizar las imágenes es crucial para la **velocidad de carga** y el **SEO** (posicionamiento en buscadores) de cualquier sitio web. Una página web rápida ofrece una mejor experiencia al usuario y reduce el consumo de datos. La siguiente tabla resume los resultados de optimizar varias imágenes utilizando diferentes plataformas.
+                </p>
+            </section>
+
+            <!-- TABLA DE OPTIMIZACIÓN - Aplicando estilos de Tailwind y CSS personalizado -->
+            <div class="overflow-x-auto shadow-2xl rounded-xl">
+                <table class="min-w-full divide-y divide-indigo-400 tabla-optimizacion">
+                    <caption class="py-3 text-xl font-extrabold bg-indigo-600 text-white">
+                        Tabla de Imágenes Optimizadas
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th> 
+                            <th>Nombre Original</th>
+                            <th>Texto Alternativo (alt)</th>
+                            <th>Peso Original</th> 
+                            <th>Peso Final</th>
+                            <th>Plataforma</th>
+                            <th>Ahorro (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila 1 -->
+                        <tr>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-900">Logo Original</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm text-gray-600">logo_original.png</td>
+                            <td class="px-6 py-3 text-sm text-gray-600">Un logo aleatorio.</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-semibold text-red-600">186 KB</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-semibold text-green-600">64 KB</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm text-gray-700">compressor.io</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-bold text-green-700">65%</td>
+                        </tr>
+
+                        <!-- Fila 2 -->
+                        <tr>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-900">Superhéroe</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm text-gray-600">hero_banner.jpg</td>
+                            <td class="px-6 py-3 text-sm text-gray-600">Dibujo de un Superhéroe.</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-semibold text-red-600">75 KB</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-semibold text-green-600">20 KB</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm text-gray-700">Squoosh</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-bold text-green-700">73%</td>
+                        </tr>
+
+                        <!-- Fila 3 -->
+                        <tr>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-gray-900">Chocolate</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm text-gray-600">chocolate.png</td>
+                            <td class="px-6 py-3 text-sm text-gray-600">Imagen de chocolate.</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-semibold text-red-600">122 KB</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-semibold text-green-600">30 KB</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm text-gray-700">compressor.io</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm font-bold text-green-700">75%</td>
+                        </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="px-6 py-3 text-right">TOTALES ACUMULADOS</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm">303 KB</td>
+                            <td class="px-6 py-3 whitespace-nowrap text-sm">104 KB</td>
+                            <td colspan="2" class="px-6 py-3 text-center">Ahorro Total Estimado: ~71%</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Sección de Recomendaciones -->
+            <section id="recomendaciones">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-l-4 border-indigo-500 pl-3">Recomendaciones Clave</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                    <li>**Formato Moderno:** Priorizar formatos de nueva generación como **WebP** siempre que sea posible para la mejor relación calidad/tamaño.</li>
+                    <li>**Atributos Obligatorios:** No olvidar los atributos `width`, `height` y, sobre todo, `alt` para accesibilidad y evitar el CLS (Cumulative Layout Shift).</li>
+                    <li>**Automatización:** Usar herramientas de optimización para automatizar la reducción de peso sin perder calidad visual. [Image of tools for web image optimization]</li>
+                </ul>
+            </section>
+        
+        </main>
+
+        <!-- FOOTER - Pie de página -->
+        <footer class="mt-auto p-4 sm:p-6 text-center bg-gray-800 text-white rounded-t-2xl">
+            <p class="text-sm">© 2025 - Lenguaje de Marcas y Sistemas de Información</p>
+        </footer>
+    </div>
+</body>
+</html>
